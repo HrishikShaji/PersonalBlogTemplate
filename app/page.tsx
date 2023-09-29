@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import img1 from '@/public/assets/kylo1.jpg'
 import { Hero } from '@/components/Hero'
-import { LovedOnes } from '@/components/LovedOnes'
+import { LatestBlogs } from '@/components/LatestBlogs'
 import { Menu } from '@/components/Menu'
 
 export default function Home() {
@@ -9,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Menu />
+      <LatestBlogs />
     </main>
   )
 }
