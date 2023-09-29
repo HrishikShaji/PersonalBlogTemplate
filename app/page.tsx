@@ -9,7 +9,6 @@ export default function Home() {
       <Hero />
       <Menu />
       <LatestBlogs />
-      <Footer />
     </main>
   )
 }
