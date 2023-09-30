@@ -9,7 +9,7 @@ export const Hero = () => {
         alt='image'
         height={1900}
         width={1900}
-        className='w-full h-60 w-60 rounded-full object-cover'
+        className=' h-60 w-60 rounded-full object-cover'
       />
       <h1 className='font-bold text-white text-3xl'>Hi, I'm Darth Vader</h1>
       <h3 className='font-semibold text-white text-xl'>I'm a Sith lord</h3>
