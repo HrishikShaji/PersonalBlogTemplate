@@ -10,26 +10,18 @@ import img2 from '@/public/assets/vader3.jpg'
 import img3 from '@/public/assets/vader4.jpg'
 
 export const ImageSlider = () => {
-  const swiperRef = useRef(null)
-
-  useEffect(() => {
-    const swiperContainer = swiperRef.current
-    const params = {
-      navigation: true,
-      pagination: true,
-    }
-
-    Object.assign(swiperContainer, params)
-    swiperContainer.initialize()
-  }, [])
   return (
     <Swiper
-      navigation={true}
       modules={[Navigation]}
-      ref={swiperRef}
-      init={true}
-      className='mySwiper w-[90vw] h-[60vh]'
+      navigation={{
+        prevEl: '.my-swiper-button-prev',
+        nextEl: '.my-swiper-button-next',
+      }}
+      loop
+      className='mySwiper w-[90vw] h-[60vh] relative flex items-center'
     >
+      <div className='my-swiper-button-prev h-10 w-10 absolute z-10 top-[50%] translate-y-[-50%] cursor-pointer left-0  bg-white' />
+      <div className='my-swiper-button-next h-10 w-10 absolute z-10 top-[50%] translate-y-[-50%] cursor-pointer right-0  bg-white' />
       <SwiperSlide>
         <Image
           src={img1}
