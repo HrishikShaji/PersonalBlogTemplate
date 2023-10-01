@@ -5,6 +5,7 @@ import img2 from '@/public/assets/vader3.jpg'
 import img3 from '@/public/assets/vader4.jpg'
 import { BlogSmallTile } from './BlogSmallTile'
 import Link from 'next/link'
+import { BsFacebook, BsGithub, BsInstagram } from 'react-icons/bs'
 
 export const RightBar = () => {
   return (
@@ -18,7 +19,11 @@ export const RightBar = () => {
       />
       <div className='flex flex-col gap-6'>
         <h1>Follow me on</h1>
-        <div className='flex gap-2'>kkk</div>
+        <div className='flex gap-2'>
+          <BsFacebook />
+          <BsGithub />
+          <BsInstagram />
+        </div>
       </div>
       <div className='flex flex-col items-start w-full gap-2 '>
         <h1>Subscribe To my newsletter</h1>
