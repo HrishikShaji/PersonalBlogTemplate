@@ -2,6 +2,8 @@ import { Footer } from '@/components/Footer'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import SessionProvider from '@/providers/SessionProvider'
+import { Navbar } from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,10 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='bg-neutral-900'>
-        {children}
-        <Footer />
-      </body>
+      <SessionProvider>
+        <body className='bg-neutral-900'>
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </SessionProvider>
     </html>
   )
 }
